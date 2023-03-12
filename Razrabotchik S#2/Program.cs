@@ -27,7 +27,7 @@ a = -9 b = -3 -> max = -3
 
 // Задача 2
 
-
+/*
   // Вариант 1
 
  Console.Write("Введите число ");
@@ -42,5 +42,20 @@ a = -9 b = -3 -> max = -3
          if (chislo2 > chislo1) 
             {System.Console.WriteLine(max = chislo2  );
              System.Console.WriteLine(min = chislo1  );}
-  
+*/
+
+
+    // Вариант 2
+
+ Console.Write("Введите число ");
+ int chislo1 = int.Parse(Console.ReadLine()!);
+ int chislo2 = int.Parse(Console.ReadLine()!);
+ int max, min = 0 ;
+     if (chislo1 > chislo2) 
+        {System.Console.WriteLine($"Максимальное число: {max = chislo1}" );
+         System.Console.WriteLine($"Минимальное число: {min = chislo2}"  );}
+     else 
+         if (chislo2 > chislo1) 
+            {System.Console.WriteLine($"Максимальное число: {max = chislo2}"  );
+             System.Console.WriteLine($"Минимальное число: {min = chislo1}"  );}
      
