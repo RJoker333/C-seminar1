@@ -90,7 +90,7 @@ a = -9 b = -3 -> max = -3
        }
 */
 
-
+/*
    // Вариант 2
 
    Console.Write("Введите три числа ");
@@ -106,4 +106,21 @@ a = -9 b = -3 -> max = -3
     
        if (chislo3 > chislo1 & chislo3 > chislo2)
           {System.Console.WriteLine($"Максимальное число: {max = chislo3}" );}
-          
+*/
+
+
+
+
+
+//  Задача 6
+
+
+   // Вариант 1
+
+     Console.Write("Введите число ");
+     int num = int.Parse(Console.ReadLine()!);
+         if (num%2 ==0)
+            {System.Console.WriteLine("Чётное" );}
+         else
+            {System.Console.WriteLine("Нечётное" );}
+
