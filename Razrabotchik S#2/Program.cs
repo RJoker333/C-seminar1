@@ -126,8 +126,24 @@ a = -9 b = -3 -> max = -3
 */
 
 
-
+/*
    // Вариант 2
 
      Console.Write("Введите число ");
      Console.WriteLine((int.Parse(Console.ReadLine()!) & 1) == 0? "Чётное": "Нечётное");
+*/
+
+
+
+//  Задача 8
+
+   
+   // Вариант 1
+
+     Console.WriteLine("Введите число N");
+     int n = int.Parse(Console.ReadLine()!);
+         for(int i=1;i<=n;i++)
+            {
+               if (i % 2 == 0)
+                  System.Console.Write(i+ "," );
+            } 
