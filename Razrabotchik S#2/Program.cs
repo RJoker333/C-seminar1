@@ -137,7 +137,7 @@ a = -9 b = -3 -> max = -3
 
 //  Задача 8
 
-   
+/*   
    // Вариант 1
 
      Console.WriteLine("Введите число N");
@@ -147,3 +147,13 @@ a = -9 b = -3 -> max = -3
                if (i % 2 == 0)
                   System.Console.Write(i+ "," );
             } 
+*/
+
+
+
+   // Вариант 2
+
+     Console.Write("Введите число N");
+       
+     foreach (int n in Enumerable.Range(1, int.Parse(Console.ReadLine()!) >> 1))
+             System.Console.WriteLine(n << 1 );
