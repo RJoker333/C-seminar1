@@ -114,7 +114,7 @@ a = -9 b = -3 -> max = -3
 
 //  Задача 6
 
-
+/*
    // Вариант 1
 
      Console.Write("Введите число ");
@@ -123,4 +123,11 @@ a = -9 b = -3 -> max = -3
             {System.Console.WriteLine("Чётное" );}
          else
             {System.Console.WriteLine("Нечётное" );}
+*/
 
+
+
+   // Вариант 2
+
+     Console.Write("Введите число ");
+     Console.WriteLine((int.Parse(Console.ReadLine()!) & 1) == 0? "Чётное": "Нечётное");
