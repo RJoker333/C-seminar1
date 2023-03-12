@@ -68,7 +68,7 @@ a = -9 b = -3 -> max = -3
 
 // Задача 4
 
-
+/*
    // Вариант 1
 
    Console.Write("Введите число ");
@@ -88,3 +88,22 @@ a = -9 b = -3 -> max = -3
                    {System.Console.WriteLine(max = chislo3 );} 
              }
        }
+*/
+
+
+   // Вариант 2
+
+   Console.Write("Введите три числа ");
+   int chislo1 = int.Parse(Console.ReadLine()!);
+   int chislo2 = int.Parse(Console.ReadLine()!);
+   int chislo3 = int.Parse(Console.ReadLine()!);
+   int max = 0 ;
+       if (chislo1 > chislo2 & chislo1 > chislo3) 
+          {System.Console.WriteLine($"Максимальное число: {max = chislo1}" );}
+
+       if (chislo2 > chislo1 & chislo2 > chislo3)
+          {System.Console.WriteLine($"Максимальное число: {max = chislo2}" );}
+    
+       if (chislo3 > chislo1 & chislo3 > chislo2)
+          {System.Console.WriteLine($"Максимальное число: {max = chislo3}" );}
+          
