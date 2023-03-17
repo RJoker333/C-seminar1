@@ -25,10 +25,15 @@
 
 //  Задача 10
 
+
     // Вариант 1
 
     Console.WriteLine("Введите трехзначное число ");
     int n = int.Parse(Console.ReadLine()!);
        int Sr = ( n %100 - n %10)/10;
        System.Console.WriteLine($"Вторая цифра числа {Sr} ");
-       
+
+
+
+
+
