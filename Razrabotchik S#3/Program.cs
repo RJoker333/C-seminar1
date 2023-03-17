@@ -55,7 +55,7 @@
 
 //  Задача 13
 
-
+/*
 System.Console.WriteLine("Введите число ");
 String? stroka = Console.ReadLine();
 if (stroka!.Length > 2)
@@ -66,14 +66,25 @@ else
 {
     System.Console.WriteLine("Введено не трехзначное число ");
 }
+*/
 
 
 
 
 
 
+//  Задача 15
 
-
+System.Console.WriteLine("Введите число ");
+int n = int.Parse(Console.ReadLine()!);
+if (n > 5 && n < 8)
+{
+   System.Console.WriteLine("Да ");  
+}
+else
+{
+   System.Console.WriteLine("Нет ");  
+}
 
 
 
