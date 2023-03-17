@@ -39,6 +39,7 @@
     // Вариант 2
            // Добавили условие разбора только 3-х значного числа, остальные просто выводятся
 
+/*
     Console.WriteLine("Введите трехзначное число ");
     int n = int.Parse(Console.ReadLine()!);
         if (n >= 100 && n < 1000)
@@ -46,6 +47,27 @@
            int Sr = ( n %100 - n %10)/10;
            System.Console.WriteLine($"Вторая цифра числа {Sr} ");  
         }
+*/
+
+
+
+
+
+//  Задача 13
+
+
+System.Console.WriteLine("Введите число ");
+String? stroka = Console.ReadLine();
+if (stroka!.Length > 2)
+{
+    System.Console.WriteLine(stroka[2]);
+}
+else
+{
+    System.Console.WriteLine("Введено не трехзначное число ");
+}
+
+
 
 
 
