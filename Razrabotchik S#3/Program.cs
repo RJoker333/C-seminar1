@@ -28,10 +28,30 @@
 
     // Вариант 1
 
+/*
     Console.WriteLine("Введите трехзначное число ");
     int n = int.Parse(Console.ReadLine()!);
        int Sr = ( n %100 - n %10)/10;
        System.Console.WriteLine($"Вторая цифра числа {Sr} ");
+*/
+
+
+    // Вариант 2
+           // Добавили условие разбора только 3-х значного числа, остальные просто выводятся
+
+    Console.WriteLine("Введите трехзначное число ");
+    int n = int.Parse(Console.ReadLine()!);
+        if (n >= 100 && n < 1000)
+        {
+           int Sr = ( n %100 - n %10)/10;
+           System.Console.WriteLine($"Вторая цифра числа {Sr} ");  
+        }
+
+
+
+
+
+
 
 
 
