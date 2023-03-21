@@ -25,6 +25,22 @@
 //  Задача 25
 
 
+Console.Write("Введите число A: ");
+int A = int.Parse(Console.ReadLine()!);
+Console.Write("Введите число B: ");
+int B = int.Parse(Console.ReadLine()!);
+int c = 1;
+
+
+while (B!=0)
+{
+    c = c * A;
+    B = B - 1;
+}
+
+Console.WriteLine($"Число А в натуральной степени В: {c}");
+
+
 
 
 
@@ -53,7 +69,7 @@ int GetSum(int n)
 
 //  Задача 29
 
-
+/*
 //Console.WriteLine("Введите размерность массива: ");
 int n = 8;
 int[] massive = OneMass(n);
@@ -68,4 +84,4 @@ int[]  OneMass(int a)
     }
     return Rez;
 }
-
+*/
