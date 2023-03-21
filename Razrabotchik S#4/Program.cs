@@ -80,6 +80,7 @@ Console.WriteLine("Расстояние между точками = " + res);
 */
 
 
+/*
    //  Вариант 2
 
  int ReadInt(string text)
@@ -106,4 +107,26 @@ b[2] = ReadInt("Введите координату Z точки B: ");
 double res = Distance(a, b);
 
 Console.WriteLine("Расстояние между точками = " + res);
+*/
+
+
+
+
+//   Задача 23
+
+
+    // Вариант 1
+
+ int ReadInt(string text)
+{
+    Console.Write(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+int N = ReadInt("Введите число N: ");
+
+for (int i = 1; i <= N; i++)
+{
+    Console.Write(Math.Pow(i, 3) + " , ");
+}
 
