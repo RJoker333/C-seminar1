@@ -29,7 +29,7 @@ A (7,-5, 0); B (1,-1,9) -> 11.53
 
 //   Задача 19
 
-
+/*
 Console.WriteLine("Введите пятизначное число ");
 string a = Console.ReadLine()!;
 
@@ -51,4 +51,28 @@ string a = Console.ReadLine()!;
         return ;
     }
     return ;
+*/
 
+
+//   Задача 21
+
+   //  Вариант 1
+   
+int ReadInt(string text)
+{
+    Console.Write(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+int[] a = new int[3];
+int[] b = new int[3];
+
+a[0] = ReadInt("Введите координату Х точки А: ");
+a[1] = ReadInt("Введите координату Y точки А: ");
+a[2] = ReadInt("Введите координату Z точки А: ");
+b[0] = ReadInt("Введите координату Х точки B: ");
+b[1] = ReadInt("Введите координату Y точки B: ");
+b[2] = ReadInt("Введите координату Z точки B: ");
+
+double res = Math.Round(Math.Sqrt(Math.Pow(a[0]-b[0], 2) + Math.Pow(a[1]-b[1], 2) + Math.Pow(a[2]-b[2], 2)), 2);
+Console.WriteLine("Расстояние между точками = " + res);
