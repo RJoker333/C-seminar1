@@ -115,6 +115,7 @@ Console.WriteLine("Расстояние между точками = " + res);
 //   Задача 23
 
 
+/*
     // Вариант 1
 
  int ReadInt(string text)
@@ -129,4 +130,25 @@ for (int i = 1; i <= N; i++)
 {
     Console.Write(Math.Pow(i, 3) + " , ");
 }
+*/
 
+
+// Вариант 2
+
+
+int ReadInt(string text)
+{
+    Console.Write(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+void NumPow(int num)
+{
+    for (int i = 1; i <= num; i++)
+    {
+        Console.Write(Math.Pow(i, 3) + " , ");
+    }
+}
+
+int num = ReadInt("Введите число N: ");
+NumPow(num);
