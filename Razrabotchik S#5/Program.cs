@@ -30,7 +30,7 @@
 
 //  Задача 27
 
-
+/*
 Console.Write("Введите число A: ");
 int A = int.Parse(Console.ReadLine()!);
 Console.WriteLine($"Сумма цифр в числе А: {GetSum(A)}");
@@ -47,3 +47,25 @@ int GetSum(int n)
     }
     return sum;
 }
+*/
+
+
+
+//  Задача 29
+
+
+//Console.WriteLine("Введите размерность массива: ");
+int n = 8;
+int[] massive = OneMass(n);
+Console.WriteLine($"Массив из 8 элементов: [{String.Join("; " , massive)}]");
+
+int[]  OneMass(int a)
+{
+    int[] Rez = new int[a];
+    for (int i = 0; i < a; i++)
+    {
+        Rez[i]= new Random().Next(3);
+    }
+    return Rez;
+}
+
