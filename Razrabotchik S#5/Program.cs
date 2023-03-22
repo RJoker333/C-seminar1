@@ -25,6 +25,9 @@
 //  Задача 25
 
 
+  // Вариант 1
+
+/*
 Console.Write("Введите число A: ");
 int A = int.Parse(Console.ReadLine()!);
 Console.Write("Введите число B: ");
@@ -39,9 +42,30 @@ while (B!=0)
 }
 
 Console.WriteLine($"Число А в натуральной степени В: {c}");
+*/
 
 
+   //  Вариант 2
 
+
+Console.Write("Введите число A: ");
+int A = int.Parse(Console.ReadLine()!);
+Console.Write("Введите число B: ");
+int B = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine($"{A} в степени {B} = {Pow(A, B)}");
+
+int Pow(int n, int st)
+{
+    if (B == 0) return 1;
+    int rez = n;
+    for (int i = 2; i <= st; i++)
+    {
+        rez *= n;
+    }
+    return rez;
+
+}
 
 
 //  Задача 27
@@ -85,3 +109,7 @@ int[]  OneMass(int a)
     return Rez;
 }
 */
+
+
+
+
