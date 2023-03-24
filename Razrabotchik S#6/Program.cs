@@ -14,7 +14,7 @@
 [3, 7.4, 22.3, 2, 78] -> 76
 */
 
-
+/*
 //  Задача 1
 
 Console.WriteLine("Введите размер массива");
@@ -37,6 +37,47 @@ void ArrayRandomNum(int[] num)
     for(int i = 0; i < num.Length; i++)
     {
         num[i] = new Random().Next(100,999);
+    }
+}
+
+// ----------------Massive--------------------------------
+void PrintArray(int[] num)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < num.Length; i++)
+    {
+        Console.Write(num[i] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
+*/
+
+
+
+//  Задача 2
+
+
+Console.WriteLine("Введите размер массива");
+int size = int.Parse(Console.ReadLine()!);
+int[] num = new int[size];
+ArrayRandomNum(num);
+PrintArray(num);
+int sum = 0;
+
+for (int b = 0; b < num.Length; b+=2)
+{
+    sum = sum + num[b];
+}
+
+Console.WriteLine($"Сумма элементов стоящих на нечетных позициях: {sum}");
+
+// ----------------Massive-------------------------------
+void ArrayRandomNum(int[] num)
+{
+    for(int i = 0; i < num.Length; i++)
+    {
+        num[i] = new Random().Next(1,100);
     }
 }
 
