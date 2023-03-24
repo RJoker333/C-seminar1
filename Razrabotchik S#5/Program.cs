@@ -44,7 +44,7 @@ while (B!=0)
 Console.WriteLine($"Число А в натуральной степени В: {c}");
 */
 
-
+/*
    //  Вариант 2
 
 
@@ -66,6 +66,8 @@ int Pow(int n, int st)
     return rez;
 
 }
+*/
+
 
 
 //  Задача 27
@@ -94,6 +96,8 @@ int GetSum(int n)
 //  Задача 29
 
 /*
+   // Вариант 1
+
 //Console.WriteLine("Введите размерность массива: ");
 int n = 8;
 int[] massive = OneMass(n);
@@ -113,3 +117,19 @@ int[]  OneMass(int a)
 
 
 
+   //  Вариант 2
+
+
+int[] array =GetRandomMassive(8, 0, 100);
+Console.WriteLine($"[{String.Join(",", array)}]");
+
+
+int [] GetRandomMassive(int size, int Min, int Max)
+      {
+        int[] Rez = new int[size];
+        for (int i = 0; i < size; i++)
+        {
+            Rez[i] = new Random().Next(Min, Max +1);
+        }
+        return Rez;
+      }  
