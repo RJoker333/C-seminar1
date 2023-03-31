@@ -14,7 +14,7 @@ b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 //  Задача 41
 
 
-Console.Write("Введите элементы через пробел: ");
+Console.Write("Введите элементы(через пробел): ");
 int[] arr = Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
 int count = 0;
  
@@ -27,4 +27,7 @@ for (int i = 0; i < arr.Length; i++)
 }
  
 Console.WriteLine($"Кол-во элементов > 0: {count}");
+
+
+
 
