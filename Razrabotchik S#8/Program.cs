@@ -35,7 +35,7 @@ i = 4, j = 2 -> такого элемента в массиве нет
 
 //     Задача 47
 
-
+/*
 Console.Write("Введите колличество строк: ");
 int rows = int.Parse(Console.ReadLine()!);
 Console.Write("Введите колличество столбцов: ");
@@ -70,3 +70,51 @@ void PrintArray(double[,] array)
         Console.WriteLine();
     }
 }
+*/
+
+
+//     Задача 50
+
+int rows = ReadInt("Введите индекс строки: ");
+int colums = ReadInt("Введите индекс столбца: ");
+int[,] numbers = new int[4, 6];
+ GetArray(numbers);
+PrintArray(numbers);
+
+if (rows < numbers.GetLength(0) && colums < numbers.GetLength(1)) Console.WriteLine(numbers[rows, colums]);
+else Console.WriteLine($"{rows}{colums} -> такого числа в массиве нет");
+
+
+
+void GetArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 10);
+        }
+    }
+}
+
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+
