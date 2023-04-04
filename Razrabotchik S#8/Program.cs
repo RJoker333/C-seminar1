@@ -75,8 +75,12 @@ void PrintArray(double[,] array)
 
 //     Задача 50
 
-int rows = ReadInt("Введите индекс строки: ");
-int colums = ReadInt("Введите индекс столбца: ");
+
+
+Console.Write("Введите колличество строк: ");
+int rows = int.Parse(Console.ReadLine()!);
+Console.Write("Введите колличество столбцов: ");
+int colums = int.Parse(Console.ReadLine()!);
 int[,] numbers = new int[4, 6];
  GetArray(numbers);
 PrintArray(numbers);
