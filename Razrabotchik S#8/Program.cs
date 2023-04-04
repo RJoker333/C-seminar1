@@ -76,7 +76,7 @@ void PrintArray(double[,] array)
 //     Задача 50
 
 
-
+/*
 Console.Write("Введите колличество строк: ");
 int rows = int.Parse(Console.ReadLine()!);
 Console.Write("Введите колличество столбцов: ");
@@ -120,5 +120,75 @@ int ReadInt(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+*/
 
+
+
+
+//     Задача 52
+
+Console.Write("Введите колличество строк: ");
+int rows = int.Parse(Console.ReadLine()!);
+Console.Write("Введите колличество столбцов: ");
+int colums = int.Parse(Console.ReadLine()!);
+
+
+int[,] numbers = new int[rows, colums];
+FillArray(numbers);
+PrintArray(numbers);
+
+double[] Numbers = new double[numbers.GetLength(1)];
+
+for (int i = 0; i < numbers.GetLength(1); i++)
+{
+    double result = 0.0;
+    for (int j = 0; j < numbers.GetLength(0); j++)
+    {
+        result += numbers[j, i];
+    }
+    Numbers[i] = result / numbers.GetLength(0);
+}
+PrintAray(Numbers);
+
+
+void FillArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 10);
+        }
+    }
+}
+
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+
+void PrintAray(double[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
 
