@@ -120,7 +120,7 @@ void SortArray (int[,] array)
 
 
 
-
+/*
 Console.Write("Введите колличество строк: ");
 int rows = int.Parse(Console.ReadLine()!);
 Console.Write("Введите колличество столбцов: ");
@@ -216,6 +216,75 @@ void PrintData(int[] inArray)
     }
     Console.Write($"{el} Встречается {N}");
 }
+*/
 
 
+
+
+
+//    Задача  57
+
+
+Console.Write("Введите колличество строк: ");
+int rows = int.Parse(Console.ReadLine()!);
+Console.Write("Введите колличество столбцов: ");
+int column = int.Parse(Console.ReadLine()!);
+
+int[,] array = new int[rows, column];
+int[,] secondArray = new int[rows, column];
+int[,] resultArray = new int[rows, column];
+
+FillArrayRandom(array);
+PrintArray2(array);
+
+Console.WriteLine();
+
+FillArrayRandom(secondArray);
+PrintArray2(secondArray);
+
+Console.WriteLine();
+
+if (array.GetLength(0) != secondArray.GetLength(1))
+{
+    Console.WriteLine(" Нельзя перемножить ");
+    return;
+}
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < secondArray.GetLength(1); j++)
+    {
+        resultArray[i, j] = 0;
+        for (int k = 0; k < array.GetLength(1); k++)
+        {
+            resultArray[i, j] += array[i, k] * secondArray[k, j];
+        }
+    }
+}
+
+PrintArray2(resultArray);
+
+
+void FillArrayRandom(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 10);
+        }
+    }
+}
+
+
+void PrintArray2(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"{array[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
 
