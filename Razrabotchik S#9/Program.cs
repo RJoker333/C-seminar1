@@ -55,7 +55,7 @@
 //    Задача  54
 
 
-
+/*
 Console.Write("Введите колличество строк: ");
 int rows = int.Parse(Console.ReadLine()!);
 Console.Write("Введите колличество столбцов: ");
@@ -112,4 +112,110 @@ void SortArray (int[,] array)
         }
     }
 }
+*/
+
+
+
+//    Задача  57
+
+
+
+
+Console.Write("Введите колличество строк: ");
+int rows = int.Parse(Console.ReadLine()!);
+Console.Write("Введите колличество столбцов: ");
+int column = int.Parse(Console.ReadLine()!);
+
+
+int[,] array = GetArray(rows,column, 0, 10);
+PrintArray(array);
+Console.WriteLine();
+int[] rowArray = GetRovArray(array);
+SortArray(rowArray);
+Console.WriteLine(String.Join(" ", rowArray));
+PrintData(rowArray);
+
+
+int[,] GetArray(int m, int n, int min, int max)
+{
+    int[,] rez = new int [m, n];
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            rez[i,j] = new Random().Next(min, max+1);
+        }
+    }
+    return rez;
+}
+
+void PrintArray(int[,] inArray)
+{
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++)
+        {
+            Console.Write($"{inArray[i,j]}");
+        }
+        Console.WriteLine();
+    }
+}
+
+
+int[] GetRovArray(int[,] InArray)
+{
+    int[] rez = new int[InArray.GetLength(0)*InArray.GetLength(1)];
+    int index =0;
+    for (int i = 0; i < InArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < InArray.GetLength(1); j++)
+        {
+            rez [index] = InArray[i,j];
+            index++; 
+        }
+    }
+    return rez;
+}
+
+
+void SortArray (int[] InArray)
+{
+    for (int i = 0; i < InArray.Length; i++)
+    {
+        for (int j = i+1; j < InArray.Length; j++)
+        {
+                if (InArray[i]>InArray[j])
+                 {
+                    int p = InArray[i];
+                    InArray[i] = InArray[j];
+                    InArray[j] = p;
+                 }
+        }
+    }
+}
+
+void PrintData(int[] inArray)
+{
+    int el = inArray[0];
+    int N = 1;
+    for (int i = 0; i < inArray.Length; i++)
+    {
+        if (inArray[i]!=el)
+        {
+            for (int j = 0; j < inArray.GetLength(1); j++)
+            {
+                Console.Write($"{el} Встречается {N}");
+                el = inArray[i];
+                N = 1;
+            }
+        }
+        else
+        {
+            N ++;
+        }
+    }
+    Console.Write($"{el} Встречается {N}");
+}
+
+
 
