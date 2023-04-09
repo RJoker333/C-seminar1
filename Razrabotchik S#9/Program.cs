@@ -222,9 +222,10 @@ void PrintData(int[] inArray)
 
 
 
-//    Задача  57
+//    Задача  58
 
 
+/*
 Console.Write("Введите колличество строк: ");
 int rows = int.Parse(Console.ReadLine()!);
 Console.Write("Введите колличество столбцов: ");
@@ -287,4 +288,86 @@ void PrintArray2(int[,] array)
         Console.WriteLine();
     }
 }
+*/
+
+
+
+
+//    Задача  60
+
+
+
+
+Console.WriteLine($"Введите размер массива X x Y x Z: ");
+int x = InNum("Введите X: ");
+int y = InNum("Введите Y: ");
+int z = InNum("Введите Z: ");
+Console.WriteLine($"");
+
+int[,,] array = new int[x, y, z];
+CreateArray(array);
+WriteArray(array);
+
+int InNum(string input)
+{
+  Console.Write(input);
+  int output = int.Parse(Console.ReadLine()!);
+  return output;
+}
+
+void WriteArray (int[,,] array)
+{
+  for (int i = 0; i < array.GetLength(0); i++)
+  {
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+      Console.Write($"X({i}) Y({j}) ");
+      for (int k = 0; k < array.GetLength(2); k++)
+      {
+        Console.Write( $"Z({k})={array[i,j,k]}; ");
+      }
+      Console.WriteLine();
+    }
+    Console.WriteLine();
+  }
+}
+
+void CreateArray(int[,,] array)
+{
+  int[] temp = new int[array.GetLength(0) * array.GetLength(1) * array.GetLength(2)];
+  int  num;
+  for (int i = 0; i < temp.GetLength(0); i++)
+  {
+    temp[i] = new Random().Next(10, 100);
+    num = temp[i];
+    if (i >= 1)
+    {
+      for (int j = 0; j < i; j++)
+      {
+        while (temp[i] == temp[j])
+        {
+          temp[i] = new Random().Next(10, 100);
+          j = 0;
+          num = temp[i];
+        }
+          num = temp[i];
+      }
+    }
+  }
+  int count = 0; 
+  for (int x = 0; x < array.GetLength(0); x++)
+  {
+    for (int y = 0; y < array.GetLength(1); y++)
+    {
+      for (int z = 0; z < array.GetLength(2); z++)
+      {
+        array[x, y, z] = temp[count];
+        count++;
+      }
+    }
+  }
+}
+
+
+
 
