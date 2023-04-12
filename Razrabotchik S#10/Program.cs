@@ -19,7 +19,7 @@ m = 3, n = 2 -> A(m,n) = 29
 
 //   Задача 64
 
-
+/*
 Console.Write("Введите число: ");
 int N = int.Parse(Console.ReadLine()!);
 
@@ -30,3 +30,29 @@ string PrintNum (int start, int end)
     if (start == end) return start.ToString();
     return (end + " " + PrintNum( start, end - 1));
 }
+*/
+
+//   Задача 66
+
+
+Console.WriteLine("Введите начальное число M:");
+int M = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Введите начальное число N:");
+int N = int.Parse(Console.ReadLine()!);
+
+
+///Метод нахождения суммы натуральных элементов в промежутке от M до N
+void NumSum (int M, int N, int sum)
+{
+    if (M > N) 
+    {
+        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}"); 
+        return;
+    }
+    sum = sum + (M++);  
+    NumSum(M, N, sum);
+}
+
+NumSum(M, N, 0);
+
